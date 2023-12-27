@@ -1,40 +1,104 @@
 <!doctype html>
 <html lang="en">
+
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Wikimedia and OpenStreetMap – we strive for Free Knowledge!</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
 
-		<!-- Theme used for syntax highlighted code -->
+		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
+
 	<body>
+
 		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<section data-autoslide="10000" data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						You can override background transitions per-slide.
+					</p>
+					<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+				</section>
+
+				<section data-autoslide="50000" data-background-video="https://upload.wikimedia.org/wikipedia/commons/1/17/Deutsche_Welle_-_Daily_Drone_-_Nord-Ostsee-Kanal.webm" data-background-color="#000000">
+						<div style="position: absolute; width: 50%; right: 0; top: 0; background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h3>#DailyDrone</h3>
+							<p>Die Deutsche Welle stellt seit einigen Jahren Videos unter Creative-Commons Lizenz auf Wikimedia Commons zur Verfügung. Denn öffentlich finanzierte Inhalte sollen auch öffentlich genutzt werden können! #ÖGÖG<br />Mehr wissen? → <em>Wiki Loves Broadcast!</em></p>
+							<p><small>Deutsche Welle - Daily Drone - Nord-Ostsee-Kanal von André Götzmann, &lt;https://commons.wikimedia.org/wiki/File:Deutsche_Welle_-_Daily_Drone_-_Nord-Ostsee-Kanal.webm&gt;. CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0/deed.de&gt;</small></p>
+						</div>
+				</section>
+
+				<section data-autoslide="50000" data-background-color="#b5533c">
+				<video src="https://upload.wikimedia.org/wikipedia/commons/2/20/Kurzerkl%C3%A4rt%2C_FFP2-Masken_wiederverwenden_-_Tagesschau.webm" data-autoplay></video>
+						<div style="position: absolute; width: 50%; right: 0; top: 0; background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h3>Wiki loves Broadcast</h3>
+							<p>Auch die Tagesschau veröffentlicht Erklärvideos auf Wikimedia Commons. So können sie in der Wikipedia verwendet werden – oder für andere Zwecke wie den Schulunterricht oder auf dem Chaos Communication Congress.<br />Mehr wissen? → <em>Wiki Loves Broadcasting!</em></p>
+							<p><small>Deutsche Welle - Daily Drone - Nord-Ostsee-Kanal von André Götzmann, &lt;https://commons.wikimedia.org/wiki/File:Deutsche_Welle_-_Daily_Drone_-_Nord-Ostsee-Kanal.webm&gt;. CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0/deed.de&gt;</small></p>
+						</div>
+				</section>
+
+
+				<section data-autoslide="10000" data-background-iframe="https://osmlab.github.io/show-me-the-way/" data-background-interactive>
+				</section>
+
+				<section data-autoslide="10000" data-background-iframe="http://listen.hatnote.com/#de,en" data-background-interactive>
+				</section>
+
+
+<!--				<section data-autoslide="10000" data-background-iframe="https://osmlab.github.io/show-me-the-way/" data-background-interactive>
+					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Iframe Backgrounds</h2>
+						<p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the page in the background.</p>
+					</div>
+				</section>
+-->
+
+
 			</div>
+
 		</div>
 
 		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
 			Reveal.initialize({
+				controls: true,
+				progress: false,
+				center: true,
 				hash: true,
+				autoPlayMedia: true,
+				autoSlide: 1000,
+				loop: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
+
 		</script>
+
 	</body>
 </html>
