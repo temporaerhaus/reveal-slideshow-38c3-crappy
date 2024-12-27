@@ -1,2 +1,2 @@
 #!/bin/bash
-wget -i downloadlist -P ./localfiles/
+wget -i downloadlist -nc -P ./localfiles/
