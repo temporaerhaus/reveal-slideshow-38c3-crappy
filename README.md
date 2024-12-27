@@ -4,6 +4,10 @@
 
 The editable files are in the `gh-pages` branch. Only changes there make sense.
 
+## run locally
+
+run the `getfiles.sh` script. It will download the relevant media files to the localfiles directory (they are not delivered with this repo)
+
 <p align="center">
   <a href="https://revealjs.com">
   <img src="https://hakim-static.s3.amazonaws.com/reveal-js/logo/v1/reveal-black-text-sticker.png" alt="reveal.js" width="500">
